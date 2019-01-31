@@ -1,0 +1,23 @@
+<h1>The Cast</h1>
+<div *ngFor="let member of cast">
+    <div class="cast">
+        <img
+           title="{{member.character}"
+           alt="{{member.character}}"
+           src="../assets/img/{{member.characterPhoto}}"
+         />
+        <h2>{{member.character}}</h2>
+        <hr />
+        <div [ngStyle]="{'text-align': right}">
+          <h3>
+            played by
+            <a target="_blank" href="'https://twitter.com/' + {{member.twitter}}"> {{member.player}}</a></h3>
+          <img
+             title={{member.player}}
+             alt={{member.player}}
+             src="../assets/img/{{member.playerPhoto}}"
+           />
+        </div>
+  
+      </div>
+</div>

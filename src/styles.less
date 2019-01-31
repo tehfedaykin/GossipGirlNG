@@ -1,1 +1,139 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background: #000000 url('./assets/img/background.jpg');
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color:#fff;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+h1 {
+  font-size: 60px;
+}
+p {
+  color:#fff;
+  font-weight: 200;
+}
+
+.header {
+  margin-bottom: -35px;
+}
+
+a {
+  text-decoration: none;
+  color: #8fa6a1;
+}
+
+img {
+  width: 100%;
+}
+
+img.circle {
+  border-radius: 50%;
+  width: 75%;
+  margin: 0 auto;
+  display: block;
+}
+
+.circle {
+  img {
+    border-radius: 50%;
+    width: 75%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+      max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+      max-width: 720px;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .container {
+      max-width: 960px;
+  }
+}
+
+.container {
+    max-width: 90%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+  display: flex;
+}
+.col {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+@media (min-width: 768px) {
+  .col-md-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+
+.col-md-4 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+@teal: #34a6a8;
+@orange: #c2734c;
+@lime: #e0ed93;
+@pink: #cc5a6f;
+@green: #85a14d;
+
+.teal {
+  color: @teal;
+}
+
+.orange {
+  color: @orange;
+}
+
+.lime {
+  color: @lime;
+}
+
+.pink {
+  color: @pink;
+}
+
+.green {
+  color: @green;
+}

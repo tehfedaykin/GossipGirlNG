@@ -1,0 +1,17 @@
+{
+  "defaults": {
+    "standard": "WCAG2AAA"
+  },
+  "urls": [
+    "http://localhost:4200",
+    "http://localhost:4200/posts",
+    "http://localhost:4200/pics",
+    "http://localhost:4200/cast",
+    {
+      "url": "http://localhost:4200/posts",
+      "actions": [
+        "click element a"
+      ]
+    }
+  ]
+}

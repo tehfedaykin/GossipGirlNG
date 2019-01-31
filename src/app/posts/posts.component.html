@@ -1,0 +1,6 @@
+<div *ngFor="let post of posts">
+  <post 
+    [post]="post"
+    slug="{{ post.title | slug }}"
+  ></post>
+</div>

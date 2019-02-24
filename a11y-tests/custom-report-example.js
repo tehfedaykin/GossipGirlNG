@@ -16,7 +16,16 @@ var tests = [
   },
   {
     name: 'posts',
-    url: 'http://localhost:4200/posts',
+    url: 'http://localhost:4200/posts/',
+    testOptions: {
+      actions: [
+       
+      ]
+    }
+  },
+  {
+    name: 'post',
+    url: 'http://localhost:4200/posts/Jess-at-TechoramaNL',
     testOptions: {
       actions: [
        

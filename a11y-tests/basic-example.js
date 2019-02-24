@@ -12,7 +12,8 @@ pa11y('http://localhost:4200/', {
      debug: console.log.bind(console),
      error: console.error.bind(console),
      info: console.log.bind(console)
-   }
+   },
+   screenCapture: __dirname + '/wat.png'
     // Options go here
 }).then(async results => {
     // Returns a string with the results formatted as HTML

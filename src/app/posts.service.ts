@@ -16,6 +16,6 @@ export class PostsService {
 
   getPost(slug: string) {
     let title = slug.replace(/-/g, ' ');
-    return _.find(posts, {title: title});
+    return of(_.find(posts, {title: title}));
   }
 }

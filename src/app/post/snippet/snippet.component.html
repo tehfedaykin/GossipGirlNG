@@ -1,0 +1,21 @@
+<ng-container *ngIf="showSlug">
+  <a href="" [routerLink]="['/posts', post.title | slug]">
+    <h2>Spotted: {{post.person}}</h2>
+    <img
+       title="{{post.title}}"
+       alt="{{post.title}}"
+       src="../assets/img/{{post.image}}"
+     />
+  </a>
+</ng-container>
+<ng-container *ngIf="!showSlug">
+    <h2>Spotted: {{post.person}}</h2>
+    <img
+       title="{{post.title}}"
+       alt="{{post.title}}"
+       src="../assets/img/{{post.image}}"
+     />
+</ng-container>
+<p>Spotted at {{post.location}} </p>
+<h1>{{post.text}}</h1>
+<p><small>{{post.date}}</small></p>

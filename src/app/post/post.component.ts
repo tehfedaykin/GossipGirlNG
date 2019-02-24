@@ -4,6 +4,7 @@ import { switchMap, tap } from 'rxjs/operators';
 
 import { PostsService } from '../posts.service';
 import { Post } from '../post';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'post',
@@ -11,18 +12,15 @@ import { Post } from '../post';
   styleUrls: ['./post.component.less']
 })
 export class PostComponent implements OnInit {
-  @Input() post: Post; 
-  @Input() slug: string;
+  post: Observable<Post>; 
   constructor(private route: ActivatedRoute, private postsService: PostsService) { }
 
   ngOnInit() {
-    console.log('slug', this.slug);
-    let slug = this.route.snapshot.paramMap.get('slug');
-    if(slug) {
-      this.post = this.postsService.getPost(slug);
-      console.log(this.post);
-    }
-
+    this.post = this.route.paramMap.pipe(
+      switchMap((params: ParamMap) =>
+        this.postsService.getPost(params.get('slug')))
+    );
   }
+
 
 }

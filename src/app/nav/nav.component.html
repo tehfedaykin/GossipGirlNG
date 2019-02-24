@@ -1,6 +1,6 @@
 <div *ngFor="let item of navItems" class="nav-item">
-  <a [routerLink]="['/', item.link]" class="nav-link">
-    <img class="circle" src='../assets/img/{{item.image}}' />
+  <a [routerLink]="['/', item.link]" class="nav-link" alt="test">
+    <img class="circle" src='../assets/img/{{item.image}}' alt="test" />
     {{item.link}}
   </a>
 </div>

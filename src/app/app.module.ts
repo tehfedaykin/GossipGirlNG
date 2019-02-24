@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { PostComponent } from './post/post.component';
 import { SlugPipe } from './slug.pipe';
 import { CastComponent } from './cast/cast.component';
+import { SnippetComponent } from './post/snippet/snippet.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CastComponent } from './cast/cast.component';
     HomeComponent,
     PostComponent,
     SlugPipe,
-    CastComponent
+    CastComponent,
+    SnippetComponent
   ],
   imports: [
     BrowserModule,

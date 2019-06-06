@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { PostComponent } from './post/post.component';
 import { SlugPipe } from './slug.pipe';
 import { CastComponent } from './cast/cast.component';
 import { SnippetComponent } from './post/snippet/snippet.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,11 @@ import { SnippetComponent } from './post/snippet/snippet.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ModalModule.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBLZ92zgOUcXfTjzQeqsxQN8wMHz4ychLQ'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

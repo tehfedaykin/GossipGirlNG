@@ -6,7 +6,7 @@
   </div>
   <div class="row">
     <div class="col">
-      <ul>
+      <ul class="left-nav">
         <li>
           <h2 class="teal">welcome</h2>
           <p>to Gossip Girl<br />
@@ -45,7 +45,23 @@
       <router-outlet></router-outlet>
     </div>
     <div class="col">
+      <agm-map [latitude]="map.lat" [longitude]="map.lng" [zoom]="map.zoom">
+        <agm-marker [latitude]="map.lat" [longitude]="map.lng"></agm-marker>
+      </agm-map>
       <right-nav></right-nav>
     </div>
   </div>
 </div>
+
+<ng-template #modalContent>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Welcome to GossipGirl.com</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Gossip Girl here, your one and only source into the scandalous lives of Manhattan's software developing elite</p>
+    <p>And who am I? That's one secret I'll never tell! You know you love me… XOXO, Gossip Girl.</p>
+  </div>
+</ng-template>

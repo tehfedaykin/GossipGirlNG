@@ -11,6 +11,8 @@ var tests = [
     url: 'http://localhost:4200/',
     testOptions: {
       actions: [
+        'wait for element .modal-content button to be visible',
+        'click .modal-content button'
       ]
     }
   },
@@ -19,7 +21,8 @@ var tests = [
     url: 'http://localhost:4200/posts/',
     testOptions: {
       actions: [
-       
+        'wait for element .modal-content button to be visible',
+        'click .modal-content button'
       ]
     }
   },
@@ -28,7 +31,8 @@ var tests = [
     url: 'http://localhost:4200/posts/Jess-at-TechoramaNL',
     testOptions: {
       actions: [
-       
+        'wait for element .modal-content button to be visible',
+        'click .modal-content button'
       ]
     }
   },
@@ -55,11 +59,15 @@ var tests = [
 
 function runTest(test) {
   test.testOptions.screenCapture = './a11y-dashboard/output/' + test.name +'.png'
-  var options = test.testOptions;
+  var options = { 
+    ...test.testOptions, 
+    standard: 'WCAG2AAA'};
   pa11y(test.url, options).then((results) => {
       results.screenGrab = test.name + '.png';
       var htmlResults = jennifersReporter.process(results, test.url, true);
       fs.writeFile('a11y-dashboard/output/'+ test.name + '.html', htmlResults, function(err) {})
+  }).catch((err) => {
+    console.log(err);
   });
 }
 
